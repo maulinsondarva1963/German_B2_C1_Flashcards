@@ -1,0 +1,27 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vocabulary {
+  id                 String         @id @default(uuid())
+  word               String
+  article            String?        // der, die, das
+  partOfSpeech       String
+  translation        String
+  exampleSentence    String
+  exampleTranslation String
+  difficultyLevel    Difficulty     @default(MEDIUM)
+}
+
+enum Difficulty {
+  LOW
+  MEDIUM
+  HIGH
+}

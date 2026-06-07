@@ -1,0 +1,20 @@
+german-b1-app/
+├── prisma/
+│   └── schema.prisma          # Simplified to only store Vocabulary
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── words/route.ts # GET route to fetch vocabulary lists
+│   │   ├── layout.tsx         
+│   │   └── page.tsx           # Main App UI
+│   ├── components/
+│   │   ├── Flashcard.tsx      
+│   │   └── ProgressStats.tsx  # Displays XP, Level, and Streak
+│   ├── lib/
+│   │   └── prisma.ts          
+│   ├── store/
+│   │   └── useStore.ts        # Zustand with persistence middleware
+│   └── types/
+│       └── index.ts           
+├── tailwind.config.ts         
+└── package.json
